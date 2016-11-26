@@ -8,8 +8,8 @@
 <!--Código PHP-->
     <?php
 
-        print("Nombre registrado").$_POST["mi_nombre"]."<br />"
-        print("Apellido registrado").$_POST["mi_apellido"]."<br />"
+        print("Nombre registrado: ").$_POST["mi_nombre"]."<br />"
+        print("Apellido registrado: ").$_POST["mi_apellido"]."<br />"
 
 
     ?>
