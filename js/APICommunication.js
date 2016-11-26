@@ -54,7 +54,7 @@ function enviarDatos() {
     formData.append("mi_apellido", miApellido);
 
     //Definimos la ruta para el archivo php correspondiente a la variable url
-    url = "procesar.php";
+    url = "../procesar.php";
 
     //Creamos el objeto de conexión XMLHttpRequest sobre la variable solicitud
     solicitud = new XMLHttpRequest();
