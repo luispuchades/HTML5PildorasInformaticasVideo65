@@ -39,19 +39,29 @@ function mostrarDatos(e) {
 function enviarDatos() {
     "use strict";
 
+    // Definimos las variables locales para el nombre y el apellido.
+//    var miNombre;
+//    var miApellido;
     //Creamos la variable que alojará el constructor FormData
-    var formData;
+    var datos;
     //Creamos la variable que alojará el archivo php en el servidor
     var url;
     //Creamos la variable para la conexión con el servidor
     var solicitud;
 
+
+    var miNombreValor;
+    var miApellidoValor;
+
+    miNombreValor = miNombre.value;
+    miApellidoValor = miApellido.value;
+
     // Creamos objeto del constructor FormData sobre la variable formData.
-    formData = new FormData();
+    datos = new FormData();
 
     // Añadimos el nombre y el apellido con la clave y su valor con append
-    formData.append("mi_nombre", miNombre);
-    formData.append("mi_apellido", miApellido);
+    datos.append("mi_nombre", miNombreValor);
+    datos.append("mi_apellido", miApellidoValor);
 
     //Definimos la ruta para el archivo php correspondiente a la variable url
     url = "php/procesar.php";
@@ -67,7 +77,7 @@ function enviarDatos() {
 
     //Enviamos los datos del objeto formData que hemos creado con el constructor FormData
     // y al que le hemos añadido datos con append.
-    solicitud.send(formData);
+    solicitud.send(datos);
 
 
 }
